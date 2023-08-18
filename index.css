@@ -1,0 +1,91 @@
+/* Page default style*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
+
+
+#overall-todo{
+    width: 100%;
+    padding: 10px;
+    min-height: 100vh;
+      
+ } 
+/* styling and moving content of the page to my desired position*/
+#inner-todo{
+    padding: 10px;
+    margin: 100px auto 10px;
+    max-width: 350px;
+    background-image: url(Image/img.jpeg);
+    background-size: cover;
+    border-radius: 15px;
+    width: 100% auto 20px;
+    box-shadow: 5px 10px;
+}
+
+.header-todo{
+    display: flexbox;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.inn-todo{
+    display: flex;
+    border-radius: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 10px;
+    background: powderblue;
+}
+
+.todo-input{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/*Styling create button*/
+.todo-btn{
+    padding: 10px 10px 10px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+ul li{
+    position: relative;
+    list-style: none;
+    padding: 15px 8px 10px 50px;
+    user-select: none;
+    cursor: pointer;
+}
+
+ul li::before {
+    content: " ";
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-image: url(Image/radio-button-unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(Image/checked.png);
+}
+
