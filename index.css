@@ -89,6 +89,7 @@ ul li.checked::before{
     background-image: url(images/checked.png);
 }
 
+/*Element was added through JS*/
 ul li span{
     position: absolute;
     right: 0;
@@ -104,4 +105,10 @@ ul li span{
 
 ul li span:hover{
     background: #fff;
+}
+/*time and date styling*/
+.dateTime{
+    color: darkgoldenrod;
+    padding: 20px;
+
 }
