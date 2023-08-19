@@ -18,7 +18,7 @@
     padding: 10px;
     margin: 100px auto 10px;
     max-width: 350px;
-    background-image: url(Image/img.jpeg);
+    background-image: url(images/bkg.jpg);
     background-size: cover;
     border-radius: 15px;
     width: 100% auto 20px;
@@ -68,12 +68,12 @@ ul li{
 }
 
 ul li::before {
-    content: " ";
+    content: "";
     position: absolute;
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    background-image: url(Image/radio-button-unchecked.png);
+    background-image: url(images/radio-button-unchecked.png);
     background-size: cover;
     background-position: center;
     top: 12px;
@@ -86,6 +86,22 @@ ul li.checked{
 }
 
 ul li.checked::before{
-    background-image: url(Image/checked.png);
+    background-image: url(images/checked.png);
 }
 
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+
+}
+
+ul li span:hover{
+    background: #fff;
+}
