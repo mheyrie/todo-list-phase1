@@ -3,11 +3,13 @@ const list = document.querySelector(".sample-list");
 const timeE = document.querySelector(".time");
 const dateE = document.querySelector(".date");
 
+//creating a function for createTask() shown on the html
 function createTask(){
     if (input.value === ""){
         alert("You are required to input a task!");
 
-    } else{
+    } else {
+        //created li and span element
         let li = document.createElement("li");
         li.textContent = input.value;
         list.appendChild(li);
@@ -16,11 +18,11 @@ function createTask(){
         span.textContent = "\u00d7";
         li.appendChild(span);
     }
-
     input.value = "";
 }
 
-// EventListner to check or uncheck/delete completed task
+
+// EventListner to check completed task using toggle wehike aslo incorporating deleting of task
 list.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
@@ -29,14 +31,12 @@ list.addEventListener("click", function(e){
     }
 }, false);
 
-
 //Adding Date and Time fucntion 
-function forTime(date){
-    let hour = date.getHours() % 12 || 12;
-    let min = date.getMinutes();
-    let sec = date.getSeconds();
-    let isAM = date.getHours() < 12;
-
+function forTime(time){
+    let hour = time.getHours() % 12 || 12;
+    let min = time.getMinutes();
+    let sec = time.getSeconds();
+    let isAM = time.getHours() < 12;
     return `${hour.toString().padStart(2, "0")}:${min.toString().padStart(2, "0")}:${sec.toString().padStart(2, "0")} ${isAM ? "AM" : "PM"}`;
 }
 
@@ -49,7 +49,6 @@ function forDate(date){
 
 setInterval(() => {
     let now = new Date();
-
     timeE.textContent = forTime(now);
     dateE.textContent = forDate(now);
 

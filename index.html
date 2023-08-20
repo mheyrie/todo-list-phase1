@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/0cc79b077e.js" crossorigin="anonymous"></script>
     <script defer src="index.js"></script>
-    <script defer src="test.js"></script>
 </head>
 <body>
-    <div id="overall-todo">
+    <div id="container">
             <div class="inner-todo" id="inner-todo">
             <header class="header-todo"> 
                 <h1>To-Do List <i class="fa-solid fa-list-ul"></i></h1>
@@ -21,18 +20,17 @@
                 </div>
             </header>
             <div class="inn-todo">
-                <input type="text" class="todo-input" id="todo-input" placeholder="Click here to Add a task" >
+                <input type="text" class="todo-input" id="todo-inp" placeholder="Click here to Add a task" >
                 <button onclick="createTask()" class="todo-btn">Create </button>
             </div>
-            <h4>Below are the List of things i need to do</h4>
-            <ul class="sample-list">
-                <!-- <li class="checked">Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li> -->
-            </ul>
+            <div>
+                <h4>Below are the List of things i need to do</h4>
+                <ul class="sample-list">
+                </ul>
+            </div>
             </div>
         
     </div>
-  
+ 
 </body>
 </html> 
